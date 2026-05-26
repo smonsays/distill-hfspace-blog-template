@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Paper Title</title>
+
+  <!-- Import the official Distill template from the source -->
+  <script src="https://distill.pub/template.v2.js"></script>
+
+  <style>
+    /* Add any custom overrides here */
+    d-title {
+      text-align: center;
+    }
+
+    .graphical-abstract {
+      max-width: 800px;
+      margin: 20px auto;
+      display: block;
+      width: 100%;
+    }
+
+    .graphical-abstract svg {
+      width: 100%;
+      height: auto;
+      background: #f8f9fa;
+      border-radius: 8px;
+      border: 1px solid #e9ecef;
+    }
+
+    .graphical-abstract-caption {
+      font-style: italic;
+      color: rgba(0, 0, 0, 0.6);
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Metadata and Configuration -->
+  <d-front-matter>
+    <script type="text/json">
+      {
+        "title": "My Paper Title",
+        "description": "A clean, minimal template for an academic paper.",
+        "published": "Feb 19, 2025",
+        "doi": "10.48550/arxiv.xxxx.xxxxx",
+        "authors": [
+          {
+            "author": "First Author",
+            "authorURL": "https://example.com",
+            "affiliations": [
+              {
+                "name": "Affiliation A"
+              }
+            ]
+          },
+          {
+            "author": "Second Author",
+            "authorURL": "https://example.com",
+            "affiliations": [
+              {
+                "name": "Affiliation B"
+              }
+            ]
+          }
+        ],
+        "katex": {
+          "delimiters": [
+            { "left": "$$", "right": "$$", "display": false },
+            { "left": "\\[", "right": "\\]", "display": true }
+          ]
+        }
+      }
+    </script>
+  </d-front-matter>
+
+  <!-- Title block and Graphical Abstract -->
+  <d-title>
+    <h1 class="l-page">My Paper Title</h1>
+
+    <!-- Graphical Abstract -->
+    <div class="graphical-abstract l-page">
+      <svg viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg">
+        <rect width="800" height="300" fill="#f8f9fa"/>
+        <text x="50%" y="50%" font-family="sans-serif" font-size="24" fill="#adb5bd" text-anchor="middle" dominant-baseline="middle">
+          Graphical Abstract Placeholder
+        </text>
+      </svg>
+      <div class="graphical-abstract-caption">
+        Graphical abstract illustrating the main concept of the paper.
+      </div>
+    </div>
+  </d-title>
+
+  <!-- Automatically generated Author Byline -->
+  <d-byline></d-byline>
+
+  <!-- Main Article Content -->
+  <d-article>
+    <h2>Abstract</h2>
+    <p>
+      This is the abstract of the paper. It summarizes the key findings, methodologies, and context of the research.
+      This paper builds on previous foundational work <d-cite key="example2023"></d-cite>.
+    </p>
+
+    <h2>Results</h2>
+    <p>
+      Here we present our results. Distill supports $\KaTeX$ to render equations directly inline using standard
+      delimiters. For example, the equation for a line is:
+      $$ y = mx + b $$
+    </p>
+
+    <p>
+      You can also render larger block equations:
+    </p>
+
+    <d-math block>
+      \mathbf{W} \leftarrow \mathbf{W} - \alpha \nabla_{\mathbf{W}} L(\mathbf{W})
+    </d-math>
+
+    <h2>Discussion</h2>
+    <p>
+      The discussion section interprets the findings and provides context for future work. Notice how clean the raw
+      HTML is when you rely purely on the Distill Web Components without complex build systems.
+    </p>
+  </d-article>
+
+  <!-- Appendix and Bibliography -->
+  <d-appendix>
+    <!-- Distill automatically fetches and parses this file -->
+    <d-bibliography src="bibliography.bib"></d-bibliography>
+  </d-appendix>
+
+</body>
+</html>
