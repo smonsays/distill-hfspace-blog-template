@@ -17,13 +17,13 @@ See [distill.md](./distill.md) for how to use the distill framework.
 
 ## Local Development
 
-Because the Distill Javascript dynamically fetches `bibliography.bib` via XMLHttpRequest (XHR), the bibliography won't show if you open the HTML file locally in a browser. 
+Because the Distill Javascript dynamically fetches `bibliography.bib` via XMLHttpRequest, the bibliography won't show if you open the HTML file locally in a browser. 
 
 You must serve the directory using a simple local web server.
 If you have Python installed, you can simply run:
 
 ```bash
-python3 -m http.server
+python -m http.server
 ```
 
 Then visit [http://localhost:8000](http://localhost:8000) in your browser.
